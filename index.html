@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TrueDim for Windows — Download</title>
+<meta name="description" content="TrueDim — measurement-grade PDF markup for people who work from drawings. Download for Windows.">
+<style>
+  :root {
+    --bg: #131316;
+    --panel: #1c1c21;
+    --panel2: #232329;
+    --text: #f2f0ec;
+    --text2: #9c9aa3;
+    --red: #c0392f;
+    --red-hi: #d94a3f;
+    --line: #2e2e35;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.55 system-ui, "Segoe UI", -apple-system, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .wrap { width: min(720px, 92vw); margin: 0 auto; flex: 1; }
+  header { padding: 64px 0 8px; }
+  .mark {
+    display: inline-flex; align-items: baseline; gap: 10px;
+  }
+  .mark h1 { font-size: 40px; font-weight: 800; letter-spacing: -0.02em; }
+  .mark h1 .dim { color: var(--red-hi); }
+  .tag {
+    font-size: 12.5px; font-weight: 600; color: var(--text2);
+    border: 1px solid var(--line); border-radius: 999px;
+    padding: 3px 10px; vertical-align: middle;
+  }
+  .sub { color: var(--text2); font-size: 18px; margin-top: 10px; max-width: 54ch; }
+  .card {
+    background: var(--panel); border: 1px solid var(--line);
+    border-radius: 14px; padding: 28px; margin-top: 36px;
+  }
+  .btnrow { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    border-radius: 10px; padding: 13px 22px;
+    font-size: 16px; font-weight: 700; text-decoration: none;
+    border: 1px solid transparent;
+  }
+  .btn svg { flex: none; }
+  .btn.primary { background: var(--red); color: #fff; }
+  .btn.primary:hover { background: var(--red-hi); }
+  .btn.ghost { background: transparent; color: var(--text); border-color: var(--line); }
+  .btn.ghost:hover { border-color: var(--text2); }
+  .vers { color: var(--text2); font-size: 13.5px; margin-left: 2px; }
+  .note {
+    margin-top: 20px; padding: 14px 16px; border-radius: 10px;
+    background: var(--panel2); border: 1px solid var(--line);
+    color: var(--text2); font-size: 14px;
+  }
+  .note b { color: var(--text); font-weight: 650; }
+  ul.feats { margin: 34px 0 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+  ul.feats li { padding-left: 26px; position: relative; color: var(--text2); font-size: 15px; }
+  ul.feats li::before {
+    content: ""; position: absolute; left: 0; top: 7px;
+    width: 10px; height: 10px; border-radius: 3px; background: var(--red);
+    transform: rotate(45deg); opacity: 0.9;
+  }
+  ul.feats li b { color: var(--text); font-weight: 650; }
+  .req { margin-top: 30px; color: var(--text2); font-size: 13.5px; }
+  footer {
+    border-top: 1px solid var(--line); margin-top: 56px;
+    padding: 22px 0 34px; color: var(--text2); font-size: 13px;
+  }
+  footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  a.plain { color: var(--text2); }
+  a.plain:hover { color: var(--text); }
+  @media (max-width: 480px) {
+    header { padding-top: 40px; }
+    .mark h1 { font-size: 32px; }
+    .card { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="mark">
+        <h1>True<span class="dim">Dim</span></h1>
+        <span class="tag">for Windows</span>
+      </div>
+      <p class="sub">Measurement-grade PDF markup for people who work from drawings.
+      Dimensions that snap to real linework, verified scales, and takeoffs — on the
+      same files your iPad and Airtable mark up.</p>
+    </header>
+
+    <div class="card">
+      <div class="btnrow">
+        <a class="btn primary" href="https://github.com/CaseyKleinman/truedim-releases/releases/latest/download/TrueDim-Setup.exe">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-4.5-4.5M12 15l4.5-4.5M4 20h16"/></svg>
+          Download installer
+        </a>
+        <a class="btn ghost" href="https://github.com/CaseyKleinman/truedim-releases/releases/latest/download/TrueDim-Portable.exe">
+          Portable .exe
+        </a>
+        <span class="vers" id="vers">Windows 10/11 · 64-bit</span>
+      </div>
+      <div class="note">
+        <b>First run:</b> Windows SmartScreen will warn because the app isn’t
+        code-signed yet. Choose <b>More info → Run anyway</b>. The installer is
+        published only from this page’s releases.
+      </div>
+    </div>
+
+    <ul class="feats">
+      <li><b>One shared format.</b> Files round-trip live with TrueDim on iPad and
+        TrueDim in Airtable — marks stay editable everywhere, nothing flattens
+        until you export.</li>
+      <li><b>Dimensions that snap.</b> Endpoint snapping to the sheet’s actual
+        linework, alignment rays, and a Verify tool that reads scale notes and
+        measures by tapping the drawing.</li>
+      <li><b>Takeoffs.</b> Area, perimeter, angle, count markers, and region
+        highlights — values computed from the adopted scale.</li>
+      <li><b>Fast, offline, yours.</b> No accounts, no cloud. Documents stay on
+        your machine.</li>
+    </ul>
+
+    <p class="req">Get the newest build any time from this page — the buttons always
+    serve the latest release.</p>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <span>TrueDim</span>
+      <a class="plain" href="https://github.com/CaseyKleinman/truedim-releases/releases">Release history</a>
+    </div>
+  </footer>
+
+<script>
+  fetch("https://api.github.com/repos/CaseyKleinman/truedim-releases/releases/latest")
+    .then(r => r.ok ? r.json() : null)
+    .then(rel => {
+      if (!rel) return;
+      const d = rel.published_at ? new Date(rel.published_at) : null;
+      const when = d ? d.toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" }) : "";
+      document.getElementById("vers").textContent =
+        `${rel.tag_name}${when ? " · " + when : ""} · Windows 10/11 · 64-bit`;
+    })
+    .catch(() => {});
+</script>
+</body>
+</html>
